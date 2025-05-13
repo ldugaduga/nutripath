@@ -1,10 +1,19 @@
-body {
+html,body {
     background: url(/img/Background.jpg) no-repeat;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .sidebar {
-    background: #fff;
+    background: #fff !important;
     border-radius:0px 20px 20px 0px;
-    width: 200px;
+    width: 220px;
+}
+
+.sidebar .btn-light {
+    background-color: #F8F8F8;
+    text-align: left;
+}
+.sidebar .btn-light img {
+    margin-right: 25px;
 }
