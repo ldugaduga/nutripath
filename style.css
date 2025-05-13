@@ -1,0 +1,10 @@
+body {
+    background: url(/img/Background.jpg) no-repeat;
+    background-size: cover;
+}
+
+.sidebar {
+    background: #fff;
+    border-radius:0px 20px 20px 0px;
+    width: 200px;
+}
