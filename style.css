@@ -4,9 +4,17 @@ html,body {
     min-height: 100vh;
 }
 
+.headings {
+    color: #0014C3;
+}
+
+.btn-primary {
+    background-color: #0047FF;
+}
+
 .sidebar {
     background: #fff !important;
-    border-radius:0px 20px 0 0px;
+    border-radius:0px 20px 20px 0px;
     width: 240px;
 }
 
@@ -30,7 +38,17 @@ html,body {
     position: absolute;
 }
 
-.top-one {
-    background: #fff;
-    
+.second {
+    border-radius: 10px;
+}
+
+.introduction {
+    background: #0047FF;
+    border-radius: 9px 9px 0 0;
+}
+
+
+.table-container {
+    border-radius: 10px;
+    border:1px solid #dee2e6;
 }
