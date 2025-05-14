@@ -52,3 +52,10 @@ html,body {
     border-radius: 10px;
     border:1px solid #dee2e6;
 }
+
+@media (max-width:768px) {
+    .sidebar {
+        width: 90%;
+        margin-bottom: 45px;
+    }
+}
