@@ -2,6 +2,7 @@ html,body {
     background: url(/img/Background.jpg) no-repeat;
     background-size: cover;
     min-height: 100vh;
+    font-size: 15px;
 }
 
 .headings {
@@ -57,5 +58,9 @@ html,body {
     .sidebar {
         width: 90%;
         margin-bottom: 45px;
+    }
+    .news-img {
+        min-height: 200px;
+        border-radius: 10px;
     }
 }
