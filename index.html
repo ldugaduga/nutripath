@@ -11,8 +11,8 @@
 <body>
 
     <header class="p-2 bg-transparent">
-        <div class=container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end">                
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-end">       
                 <div class="text-end">
                   <ul  class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li>
@@ -26,11 +26,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="btn btn-light">Logout <img src="img/icons/logout-icon.svg" alt=""></a>
+                        <a  href="#" class="btn btn-light logout-button">Logout <img src="img/icons/logout-icon.svg" alt=""></a>
                     </li>
                   </ul>
-                    
                 </div>
+                <ul class="navbar-nav flex-row d-md-none"> 
+                    <li class="nav-item text-nowrap"> 
+                        <button style="background:#fff; border-radius: 5px;" class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"> 
+                            <svg style="width: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="color:#fff"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                         </button> 
+                    </li> 
+                </ul>  
               </div>
         </div>
     </header>
@@ -38,156 +44,158 @@
     <div class="container-fluid">
         <div class="row">
             <div class="sidebar shadow col-md-3 col-lg-2 pt-4 pb-4 pl-3 py-3 bg-body-tertiary">
-                <div class="text-end mb-4 pb-0">
-                    <a href="#"><img src="img/icons/collapsing-icon.png" alt=""></a>
-                </div>
-                <div class="d-grid gap-2 pb-2">
-                    <a href="#" class="btn btn-primary">
-                        <strong>Order Patient Tests</strong>
-                    </a>
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/House-icon.png" alt="">
+                <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel"> 
+                    <div class="text-end mb-4 pb-0">
+                        <a href="#"><img src="img/icons/collapsing-icon.png" alt=""  data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></a>
+                    </div>
+                    <div class="d-grid gap-2 pb-2">
+                        <a href="#" class="btn btn-primary">
+                            <strong>Order Patient Tests</strong>
+                        </a>
+                        <a href="#" class="btn btn-light">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="img/icons/House-icon.png" alt="">
+                                </div>
+                                <div class="col-9">
+                                    Dashboard
+                                </div>
                             </div>
-                            <div class="col-9">
-                                Dashboard
+                        </a>
+                        <a href="#" class="btn btn-light">
+                            <div class="row">
+                                <div class="col-3">
+                                    <span class="badge-container"><span class="badge bg-primary">9</span><img src="img/icons/results-icon.png" alt=""></span>
+                                </div>
+                                <div class="col-9">
+                                    Results
+                                </div>   
+                            </div>         
+                        </a>
+                    </div>
+                    <h6 class="mb-3 mt-3"><strong>Make an Order</strong></h6>
+                    <div class="d-grid gap-2 pb-2">
+                        <a href="#" class="btn btn-light">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="img/icons/order-test-kit-icon.png" alt="">
+                                </div>
+                                <div class="col-9">
+                                    Order <br>Test Kit Stock
+                                </div>
                             </div>
+                        </a>
+                        <a href="#" class="btn btn-light">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="img/icons/order-patient-icon.png" alt="">
+                                </div>
+                                <div class="col-9">
+                                    Order <br>Patient Tests
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h6 class="mb-3 mt-3"><strong>Tests</strong></h6>
+                        <div class="d-grid gap-2 pb-2">
+                            <a href="#" class="btn btn-light">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/icons/prev-test-icon.png" alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        Previous Test<br>Requests
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="btn btn-light">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <span class="badge-container"><span class="badge bg-primary">3</span><img src="img/icons/retest-icon.png" alt=""></span>
+                                    </div>
+                                    <div class="col-9">
+                                        Re-test
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="btn btn-light">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <span class="badge-container"><span class="badge bg-primary">1</span><img src="img/icons/directory-icon.png" alt=""></span>
+                                    </div>
+                                    <div class="col-9">
+                                        Directory
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                     <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <span class="badge-container"><span class="badge bg-primary">9</span><img src="img/icons/results-icon.png" alt=""></span>
+                    <h6 class="mb-3 mt-3"><strong>Support</strong></h6>
+                            <div class="d-grid gap-2 pb-2">
+                                <a href="#" class="btn btn-light">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="img/icons/resources-icon.png" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            Resources
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn-light">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="img/icons/meded-icon.png" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            MedEd
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn-light">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="img/icons/book-consult-icon.png" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            Book Consult
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="col-9">
-                                Results
-                            </div>   
-                        </div>         
-                    </a>
-                </div>
-                <h6 class="mb-3 mt-3"><strong>Make an Order</strong></h6>
-                <div class="d-grid gap-2 pb-2">
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/order-test-kit-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Order <br>Test Kit Stock
-                            </div>
+                        <h6 class="mb-3 mt-3"><strong>Your Account</strong></h6>
+                        <div class="d-grid gap-2 pb-2">
+                                <a href="#" class="btn btn-light">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="img/icons/resources-icon.png" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            Profile
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn-light">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="img/icons/meded-icon.png" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            Saved Tests
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn btn-light">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="img/icons/book-consult-icon.png" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            Patients
+                                        </div>
+                                    </div>
+                                </a>
                         </div>
-                    </a>
-                     <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/order-patient-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                Order <br>Patient Tests
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <h6 class="mb-3 mt-3"><strong>Tests</strong></h6>
-                <div class="d-grid gap-2 pb-2">
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/prev-test-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Previous Test<br>Requests
-                            </div>
-                        </div>
-                    </a>
-                     <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <span class="badge-container"><span class="badge bg-primary">3</span><img src="img/icons/retest-icon.png" alt=""></span>
-                            </div>
-                            <div class="col-9">
-                                Re-test
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <span class="badge-container"><span class="badge bg-primary">1</span><img src="img/icons/directory-icon.png" alt=""></span>
-                            </div>
-                            <div class="col-9">
-                                Directory
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <h6 class="mb-3 mt-3"><strong>Support</strong></h6>
-                <div class="d-grid gap-2 pb-2">
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/resources-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Resources
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/meded-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 MedEd
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/book-consult-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Book Consult
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <h6 class="mb-3 mt-3"><strong>Your Account</strong></h6>
-                <div class="d-grid gap-2 pb-2">
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/resources-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Profile
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/meded-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Saved Tests
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="btn btn-light">
-                        <div class="row">
-                            <div class="col-3">
-                                <img src="img/icons/book-consult-icon.png" alt="">
-                            </div>
-                            <div class="col-9">
-                                 Patients
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                </div> <!--offcanvas-->
             </div> <!-- end sidebar -->
             <main class="col-md-9  col-lg-9 px-md-4 mb-5">
                 <div class="top-one ps-5 pe-5 pt-4 pb-4 bg-white">
@@ -275,7 +283,7 @@
                     <div class="row">
                         <div class="col-12">
                             <h3 class="mb-3">Latest status updates</h3>
-                            <div class="table-container table-responsive">
+                            <div class="table-container table-responsive small">
                                 <table class="table table-striped table-sm m-0">
                                 <tr>
                                     <th class="p-3" style="border-radius: 10px 0 0 0">Reference</th>
